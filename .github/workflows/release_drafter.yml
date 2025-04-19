@@ -1,21 +1,22 @@
-name: 'Release Drafter'
+name: Release Drafter
+
 on:
-  pull_request:
-    types:
-      - closed
   push:
     branches:
       - main
+  pull_request:
+    types: [closed]
 
 jobs:
-  release-drafter:
+  update_release_draft:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Draft release notes
+      - name: Update Release Draft
         uses: release-drafter/release-drafter@v5
         with:
-          config-name: "default-config.yml"
-          versioning-strategy: "auto"
+          config-name: release-drafter.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

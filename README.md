@@ -1,3 +1,5 @@
+[![NuGet version](https://badge.fury.io/nu/ValidationToolkit.svg)](https://badge.fury.io/nu/ValidationToolkit)
+
 # ValidationToolkit
 
 A .NET library providing lightweight validation methods for various Indian formats, including PAN, Aadhar, and mobile numbers.

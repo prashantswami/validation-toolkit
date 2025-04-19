@@ -1,6 +1,3 @@
-# Let's generate the markdown content and save it as a .md file for the user.
-
-md_content = """
 # ValidationToolkit
 
 A .NET library providing lightweight validation methods for various Indian formats, including PAN, Aadhar, and mobile numbers.

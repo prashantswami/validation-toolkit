@@ -1,0 +1,33 @@
+    name: Static Code Analysis
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Run .NET Code Analysis
+        uses: dotnet/code-analysis@v1
+        with:
+          build-breaking: true
+          projects: '**/*.csproj'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

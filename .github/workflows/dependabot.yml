@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget" # for .NET projects
+    directory: "/"
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+    versioning-strategy: "increase" # Determines how versions are updated

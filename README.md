@@ -1,4 +1,5 @@
 [![NuGet version](https://badge.fury.io/nu/ValidationToolkit.svg)](https://badge.fury.io/nu/ValidationToolkit)
+[![Build and Test](https://github.com/prashantswami/validation-toolkit/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/prashantswami/validation-toolkit/actions/workflows/build_and_test.yml)
 
 # ValidationToolkit
 
